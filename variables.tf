@@ -15,7 +15,7 @@ variable "password"{
 variable "Flex_Account" {
   type = string
   description = "FortiFlex Account"
-  default = "FEXVME0000000709"
+  default = "ELAVMR0000000640"
 }
 
 ##########################################################
