@@ -33,7 +33,7 @@ resource "aws_instance" "fgtvm" {
   key_name          = var.keyname
   user_data = templatefile("${var.bootstrap-fgtvm}", {
     type         = "${var.license_type}"
-    license_file = "${local.FortiFlex_Tokens.token_FGT_VM}"
+    license_file = "${data.fortiflexvm_vms_list.vms_token.vms[0].token}"
     adminsport   = "${var.adminsport}"
   })
 
