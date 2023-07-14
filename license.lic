@@ -1,1 +1,1 @@
-exec vm-license {$local.FortiFlex_Tokens.token_FGT_VM}
+{$local.FortiFlex_Tokens.token_FGT_VM}
