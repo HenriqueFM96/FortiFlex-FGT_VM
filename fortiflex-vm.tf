@@ -8,7 +8,7 @@ provider "fortiflexvm" {
 resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
     product_type = "FGT_VM_Bundle"
     program_serial_number = var.Flex_Account
-    name = "FGT_VM_Bundle - Terraform - 05"
+    name = "FGT_VM_Bundle - Terraform - 00"
     fgt_vm_bundle {
       cpu_size =  "2"
       service_pkg = "ATP"
