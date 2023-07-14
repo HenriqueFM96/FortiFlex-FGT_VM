@@ -1,3 +1,12 @@
+##############################################################################################################################
+#        AWS Provider being used as well as credentials that are goint to be used to establish a connection to AWS           #
+##############################################################################################################################
+provider "aws" {
+  region = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
+}
+
 // AWS VPC 
 resource "aws_vpc" "fgtvm-vpc" {
   cidr_block           = var.vpccidr
