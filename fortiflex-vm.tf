@@ -24,12 +24,12 @@ resource "fortiflexvm_vms_create" "FGTs_ATP_Customer1"{
     folder_path = "My Assets"
     vm_count = 1
 }
-
+/*
 # Printing the Config ID
 output "FF_Output_id" {
         value = fortiflexvm_config.FGT_VM_Bundle_ATP.id
 }
-
+*/
 # Saving ConfigID as data to be used later
 data "fortiflexvm_vms_list" "vms_token" {
   config_id = fortiflexvm_vms_create.FGTs_ATP_Customer1.config_id
