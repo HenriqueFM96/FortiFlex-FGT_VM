@@ -1,1 +1,1 @@
-{$local.FortiFlex_Tokens.token_FGT_VM}
+{data.fortiflexvm_vms_list.vms_token.vms[0].token}
