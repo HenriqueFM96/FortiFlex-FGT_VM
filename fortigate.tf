@@ -33,7 +33,7 @@ resource "aws_instance" "fgtvm" {
   key_name          = var.keyname
   user_data = templatefile("${var.bootstrap-fgtvm}", {
     type         = "${var.license_type}"
-    license_file = "${var.license}"
+    license      = "${var.license}"
     adminsport   = "${var.adminsport}"
   })
 
@@ -61,4 +61,7 @@ resource "aws_instance" "fgtvm" {
   tags = {
     Name = "FortiGateVM"
   }
+  depends_on = [
+    fortiflexvm_vms_create.FGTs_ATP_Customer1
+  ]
 }
