@@ -14,7 +14,7 @@ resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
       service_pkg = "ATP"
     }
 }
-*/
+
 # Create one VM using the previous Configuration that was created
 resource "fortiflexvm_vms_create" "FGTs_ATP_Customer1"{
     # config_id = fortiflexvm_config.FGT_VM_Bundle_ATP.id
@@ -46,4 +46,4 @@ locals {
 output "testingTokenOut" {
   value = local.FortiFlex_Tokens.token_FGT_VM
 }
-
+*/
