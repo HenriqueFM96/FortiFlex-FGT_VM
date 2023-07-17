@@ -317,5 +317,5 @@ variable "bootstrap-fgtvm" {
 variable "license" {
   // Change to your own byol license file, license.lic
   type    = string
-  default = "357700A057A10D3951F7"
+  default = "384522F2D6E052A36130"
 }
