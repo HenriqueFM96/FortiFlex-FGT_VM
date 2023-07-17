@@ -61,7 +61,7 @@ resource "aws_instance" "fgtvm" {
   tags = {
     Name = "FortiGateVM"
   }
-  depends_on = [
-    fortiflexvm_vms_create.FGTs_ATP_Customer1
-  ]
+  #depends_on = [
+  #  fortiflexvm_vms_create.FGTs_ATP_Customer1
+  #]
 }
