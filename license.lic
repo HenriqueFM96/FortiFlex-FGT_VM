@@ -1,1 +1,1 @@
-{data.fortiflexvm_vms_list.vms_token.vms[0].token}
+{$data.fortiflexvm_vms_list.vms_token.vms[0].token}
