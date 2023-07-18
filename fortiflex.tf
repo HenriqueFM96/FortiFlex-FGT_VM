@@ -1,14 +1,16 @@
 # Configure the Provider for FortiFlexVM
 provider "fortiflexvm" {
     username = var.username
+    # "41B2915A-10CE-455D-A028-02B558E82DC2"
     password = var.password
+    # "e1a7613097afd1dc860b8975eb1f2aea!1Aa"
 }
-/*
+
 #Flex Config - FGT ATP 2vCPUs
 resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
     product_type = "FGT_VM_Bundle"
     program_serial_number = var.Flex_Account
-    name = "FGT_VM_Bundle - Terraform - 01"
+    name = "FGT_VM_Bundle - Terraform - 00"
     fgt_vm_bundle {
       cpu_size =  "2"
       service_pkg = "ATP"
@@ -17,8 +19,7 @@ resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
 
 # Create one VM using the previous Configuration that was created
 resource "fortiflexvm_vms_create" "FGTs_ATP_Customer1"{
-    # config_id = fortiflexvm_config.FGT_VM_Bundle_ATP.id
-    config_id = 5222
+    config_id = fortiflexvm_config.FGT_VM_Bundle_ATP.id
     description = "VM Created through Terraform"
     end_date = "2023-07-22 00:00:00"
     folder_path = "My Assets"
@@ -46,4 +47,4 @@ locals {
 output "testingTokenOut" {
   value = local.FortiFlex_Tokens.token_FGT_VM
 }
-*/
+
