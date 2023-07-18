@@ -35,7 +35,7 @@ resource "aws_instance" "fgtvm" {
     type         = "${var.license_type}"
     license      = "${var.license}"
     adminsport   = "${var.adminsport}"
-    flex-license  = "${data.fortiflexvm_vms_list.vms_token.vms[0].token}"
+    flex-license  = "${var.flex-license}"
   })
 
   root_block_device {
