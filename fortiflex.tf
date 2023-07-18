@@ -3,7 +3,7 @@ provider "fortiflexvm" {
     username = var.username
     password = var.password
 }
-
+/*
 #Flex Config - FGT ATP 2vCPUs
 resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
     product_type = "FGT_VM_Bundle"
@@ -45,4 +45,4 @@ locals {
 output "testingTokenOut" {
   value = local.FortiFlex_Tokens.token_FGT_VM
 }
-
+*/
