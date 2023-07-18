@@ -35,6 +35,7 @@ resource "aws_instance" "fgtvm" {
     type         = "${var.license_type}"
     license      = "${var.license}"
     adminsport   = "${var.adminsport}"
+    flex-license  = "${data.fortiflexvm_vms_list.vms_token.vms[0].token}"
   })
 
   root_block_device {
@@ -61,7 +62,7 @@ resource "aws_instance" "fgtvm" {
   tags = {
     Name = "FortiGateVM"
   }
-  #depends_on = [
-  #  fortiflexvm_vms_create.FGTs_ATP_Customer1
-  #]
+  depends_on = [
+    fortiflexvm_vms_create.FGTs_ATP_Customer1
+  ]
 }
