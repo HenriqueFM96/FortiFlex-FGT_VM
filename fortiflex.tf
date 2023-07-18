@@ -1,16 +1,14 @@
 # Configure the Provider for FortiFlexVM
 provider "fortiflexvm" {
     username = var.username
-    # "41B2915A-10CE-455D-A028-02B558E82DC2"
     password = var.password
-    # "e1a7613097afd1dc860b8975eb1f2aea!1Aa"
 }
 
 #Flex Config - FGT ATP 2vCPUs
 resource "fortiflexvm_config" "FGT_VM_Bundle_ATP"{
     product_type = "FGT_VM_Bundle"
     program_serial_number = var.Flex_Account
-    name = "FGT_VM_Bundle - Terraform - 00"
+    name = "FGT_VM_Bundle - Terraform - 01"
     fgt_vm_bundle {
       cpu_size =  "2"
       service_pkg = "ATP"
