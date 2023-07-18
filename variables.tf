@@ -18,12 +18,6 @@ variable "Flex_Account" {
   # default = "ELAVMR0000000640"
 }
 
-variable "flex-license" {
-  type = string
-  description = "Flex License"
-  default = "384522F2D6E052A36130"
-}
-
 ##########################################################
 ##########################################################
 #                      AWS Variables                     #
@@ -322,6 +316,12 @@ variable "bootstrap-fgtvm" {
 // license file for the active fgt
 variable "license" {
   // Change to your own byol license file, license.lic
+  type    = string
+  default = "license.lic"
+}
+
+// license token for FGT Member A
+variable "flex-license" {
   type    = string
   default = "384522F2D6E052A36130"
 }
